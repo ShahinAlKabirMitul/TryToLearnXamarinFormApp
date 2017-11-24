@@ -4,11 +4,16 @@
              x:Class="TryToLearnXamarinFormApp.Geeting">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand" >
-            <Label Text="{Binding 
-                Source={x:Reference Slider},
-                Path=Value,
+                     HorizontalOptions="CenterAndExpand" 
+                     BindingContext="{x:Reference Slider}"
+                     >
+            <BoxView Color="Green" 
+                     Opacity="{Binding Value}"
+                     ></BoxView>
+            <Label  Text="{Binding  Value,
                 StringFormat='Value is {0:F2}'}" 
+                Opacity="{Binding Value
+                }"
                 x:Name="Label"
                 />
             <Slider  x:Name="Slider"></Slider>
