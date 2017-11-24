@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TryToLearnXamarinFormApp.Layout.Stack">
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Horizontal"
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            >
+            <StackLayout>
+                <Image Source="http://placehold.it/100x100"></Image>
+                <Label Text="Label 1"></Label>
+            </StackLayout>
+          
+            <Label Text="Label 2"></Label>
+            <Label Text="Label 2"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

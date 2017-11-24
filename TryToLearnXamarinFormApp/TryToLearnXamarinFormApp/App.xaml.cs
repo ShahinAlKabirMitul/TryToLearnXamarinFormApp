@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using TryToLearnXamarinFormApp.Layout;
 using Xamarin.Forms;
 
 namespace TryToLearnXamarinFormApp
@@ -13,7 +13,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new QuotesPage();
+            MainPage = new Stack();
         }
 
         protected override void OnStart()
