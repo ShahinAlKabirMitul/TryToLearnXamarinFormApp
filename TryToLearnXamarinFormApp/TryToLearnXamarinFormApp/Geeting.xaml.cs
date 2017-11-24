@@ -19,9 +19,6 @@ namespace TryToLearnXamarinFormApp
         }
 
 
-        private void Slider_OnValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            Label.Text = string.Format("Value is {0:F2}", e.NewValue);
-        }
+    
     }
 }

@@ -5,9 +5,13 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" 
                      HorizontalOptions="CenterAndExpand" >
-            <Label Text="Hello World" x:Name="Label"
+            <Label Text="{Binding 
+                Source={x:Reference Slider},
+                Path=Value,
+                StringFormat='Value is {0:F2}'}" 
+                x:Name="Label"
                 />
-            <Slider ValueChanged="Slider_OnValueChanged" x:Name="Slider"></Slider>
+            <Slider  x:Name="Slider"></Slider>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
