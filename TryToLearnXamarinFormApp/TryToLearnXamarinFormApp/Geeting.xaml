@@ -3,10 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TryToLearnXamarinFormApp.Geeting">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" 
-                   
+        
+        <StackLayout
+                     HorizontalOptions="Center"
                      BindingContext="{x:Reference Slider}"
                      >
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="0,20,0,0" />
+                    <On Platform="Android, WinPhone, UWP" Value="0,0,0,0" />
+                </OnPlatform>
+            </StackLayout.Margin>
             <BoxView Color="Green" 
                      Opacity="{Binding Value}"
                      ></BoxView>
@@ -17,6 +24,7 @@
                 x:Name="Label"
                 />
             <Slider  x:Name="Slider"></Slider>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
