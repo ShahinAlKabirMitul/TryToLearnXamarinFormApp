@@ -13,7 +13,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new Stack();
+            MainPage = new StackPhotographer();
         }
 
         protected override void OnStart()
