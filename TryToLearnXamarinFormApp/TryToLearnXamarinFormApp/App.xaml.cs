@@ -13,7 +13,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new TryToLearnXamarinFormApp.MainPage();
+            MainPage = new Geeting();
         }
 
         protected override void OnStart()
