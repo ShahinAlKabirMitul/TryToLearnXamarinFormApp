@@ -5,8 +5,16 @@
   <ListView x:Name="ListView">
       <ListView.ItemTemplate>
           <DataTemplate>
-
-                <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}"></ImageCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="1">
+                        <Image Source="{Binding ImageUrl}"> </Image>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Name}"></Label>
+                            <Label Text="{Binding Status}" TextColor="Brown"></Label>
+                        </StackLayout>
+                        <Button Text="Follow"></Button>
+                    </StackLayout>
+                </ViewCell>
           </DataTemplate>
       </ListView.ItemTemplate>
   </ListView>
