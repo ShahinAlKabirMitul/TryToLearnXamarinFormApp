@@ -59,6 +59,9 @@
     <Compile Include="Layout\StackPhotographer.xaml.cs">
       <DependentUpon>StackPhotographer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListViewDemo\ListViewDemoView.xaml.cs">
+      <DependentUpon>ListViewDemoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\pexels-photo-348549.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListViewDemo\ListViewDemoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

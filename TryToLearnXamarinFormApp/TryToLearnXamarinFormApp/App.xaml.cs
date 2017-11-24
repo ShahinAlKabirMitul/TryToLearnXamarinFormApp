@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TryToLearnXamarinFormApp.Layout;
 using TryToLearnXamarinFormApp.Layout.Grid;
+using TryToLearnXamarinFormApp.ListViewDemo;
 using Xamarin.Forms;
 
 namespace TryToLearnXamarinFormApp
@@ -14,7 +15,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new Image.Image();
+            MainPage = new ListViewDemoView();
         }
 
         protected override void OnStart()
