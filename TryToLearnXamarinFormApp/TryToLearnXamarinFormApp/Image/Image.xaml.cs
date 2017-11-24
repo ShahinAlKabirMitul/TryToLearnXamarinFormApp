@@ -18,7 +18,9 @@ namespace TryToLearnXamarinFormApp.Image
 
 		    var  imageSourceUrl= new UriImageSource {Uri = new Uri("https://static.pexels.com/photos/196970/pexels-photo-196970.jpeg") };
 		    image.Source = imageSourceUrl;
-		    image.Aspect = Aspect.Fill;
+		    imageSourceUrl.CachingEnabled = false;
+
+            image.Aspect = Aspect.Fill;
 		}
 	}
 }
