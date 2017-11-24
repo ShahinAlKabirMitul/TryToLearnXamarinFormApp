@@ -15,11 +15,13 @@ namespace TryToLearnXamarinFormApp
         public Geeting()
         {
             InitializeComponent();
+            Slider.Value = 0.5;
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+
+        private void Slider_OnValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DisplayAlert("Hi", "Hello World Xamarin", "OK");
+            Label.Text = string.Format("Value is {0:F2}", e.NewValue);
         }
     }
 }
