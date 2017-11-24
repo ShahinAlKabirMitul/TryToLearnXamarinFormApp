@@ -4,7 +4,7 @@
              x:Class="TryToLearnXamarinFormApp.Geeting">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand" 
+                   
                      BindingContext="{x:Reference Slider}"
                      >
             <BoxView Color="Green" 
