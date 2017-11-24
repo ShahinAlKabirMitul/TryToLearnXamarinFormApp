@@ -14,7 +14,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new GridPage();
+            MainPage = new GridDialer();
         }
 
         protected override void OnStart()

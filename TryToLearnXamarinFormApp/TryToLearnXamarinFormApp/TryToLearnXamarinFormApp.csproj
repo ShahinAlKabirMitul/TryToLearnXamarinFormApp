@@ -41,6 +41,9 @@
     <Compile Include="Geeting.xaml.cs">
       <DependentUpon>Geeting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Layout\Grid\GridDialer.xaml.cs">
+      <DependentUpon>GridDialer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Layout\Grid\GridPage.xaml.cs">
       <DependentUpon>GridPage.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Layout\Grid\GridPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\Grid\GridDialer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
