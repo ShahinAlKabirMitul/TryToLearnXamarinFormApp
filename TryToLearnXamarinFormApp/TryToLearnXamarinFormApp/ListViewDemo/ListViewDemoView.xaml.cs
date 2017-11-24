@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TryToLearnXamarinFormApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,13 +15,24 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
         public ListViewDemoView()
         {
             InitializeComponent();
-            var name = new List<String>
+           
+            ListView.ItemsSource = new List<Contact>
             {
-                "Mitul",
-                "Mosh",
-                "Asha"
+                new Contact()
+                {
+                    Name = "Asha",
+                    ImageUrl = "http://lorempixel.com/100/100/people/1/",
+                   
+                    
+                },
+                new Contact()
+                {
+                    Name = "Mitul",
+                    ImageUrl = "http://lorempixel.com/100/100/people/5/",
+                    Status = "Hey Lets talk"
+
+                }
             };
-            ListView.ItemsSource = name;
         }
     }
 }
