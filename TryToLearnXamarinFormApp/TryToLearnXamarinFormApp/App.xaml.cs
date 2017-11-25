@@ -18,7 +18,8 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage =new DeteView();
+            MainPage =new frmTableView();
+            
         }
 
         protected override void OnStart()
