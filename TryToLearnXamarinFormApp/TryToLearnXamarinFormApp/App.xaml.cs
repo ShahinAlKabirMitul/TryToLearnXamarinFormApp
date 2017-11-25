@@ -15,7 +15,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new ContactGroup();
+            MainPage = new ListViewDemoView();
         }
 
         protected override void OnStart()

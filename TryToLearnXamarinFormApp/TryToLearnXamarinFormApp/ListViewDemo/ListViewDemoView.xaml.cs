@@ -34,5 +34,12 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
                 }
             };
         }
+
+       
+        private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var contact = e.SelectedItem as Contact;
+            DisplayAlert("Seleted", contact.Name, "OK");
+        }
     }
 }
