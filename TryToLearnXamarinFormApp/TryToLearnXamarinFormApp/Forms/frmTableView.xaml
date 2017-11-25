@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TryToLearnXamarinFormApp.Extesnsion;assembly=TryToLearnXamarinFormApp"
              x:Class="TryToLearnXamarinFormApp.Forms.frmTableView">
     <ContentPage.Content>
        <TableView Intent="Form">
@@ -10,12 +11,8 @@
                    <TextCell Text="Last Name" Detail="Mitul"></TextCell>
                    <EntryCell Label="Title" Placeholder="(eg Shopping )"></EntryCell>
                    <SwitchCell Text="Notifications" On="True"></SwitchCell>
-                   <ViewCell>
-                       <StackLayout Orientation="Horizontal" Padding="13,0">
-                            <Label Text="Start" VerticalOptions="Center"></Label>
-                            <DatePicker  Date="{x:Static x:DateTime.Today}" HorizontalOptions="EndAndExpand"></DatePicker>
-                       </StackLayout>
-                   </ViewCell>
+                    <local:DateCell Label="Start"></local:DateCell>
+                    <local:DateCell Label="End"></local:DateCell>
                </TableSection>
 
            </TableRoot>
