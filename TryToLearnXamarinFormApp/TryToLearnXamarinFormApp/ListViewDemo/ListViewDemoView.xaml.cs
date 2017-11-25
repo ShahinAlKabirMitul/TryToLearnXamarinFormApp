@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -18,14 +19,20 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
         {
             InitializeComponent();
 
-            _contacts = new ObservableCollection<Contact>
+           
+            ListView.ItemsSource = GetContacts();
+        }
+
+        private IEnumerable GetContacts()
+        {
+            return _contacts = new ObservableCollection<Contact>
             {
                 new Contact()
                 {
                     Name = "Asha",
                     ImageUrl = "http://lorempixel.com/100/100/people/1/",
-                   
-                    
+
+
                 },
                 new Contact()
                 {
@@ -35,10 +42,9 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
 
                 }
             };
-            ListView.ItemsSource = _contacts;
         }
 
-       
+
         private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var contact = e.SelectedItem as Contact;
@@ -57,6 +63,12 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
         {
             Contact contact = (sender as MenuItem).CommandParameter as Contact;
             _contacts.Remove(contact);
+        }
+
+        private void ListView_OnRefreshing(object sender, EventArgs e)
+        {
+            ListView.ItemsSource = GetContacts();
+            ListView.EndRefresh();
         }
     }
 }
