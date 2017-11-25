@@ -23,9 +23,9 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
             ListView.ItemsSource = GetContacts();
         }
 
-        private IEnumerable GetContacts()
+        private IEnumerable GetContacts(string search=null)
         {
-            return _contacts = new ObservableCollection<Contact>
+            var _contacts = new ObservableCollection<Contact>
             {
                 new Contact()
                 {
@@ -42,6 +42,12 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
 
                 }
             };
+
+            if (search==null)
+            {
+                return _contacts;
+            }
+            return _contacts.Where(s => s.Name.ToLower().StartsWith(search.ToLower()));
         }
 
 
@@ -69,6 +75,11 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
         {
             ListView.ItemsSource = GetContacts();
             ListView.EndRefresh();
+        }
+
+        private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+           ListView.ItemsSource=  GetContacts(e.NewTextValue);
         }
     }
 }
