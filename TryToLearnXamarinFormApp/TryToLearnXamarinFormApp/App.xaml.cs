@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TryToLearnXamarinFormApp.Forms;
 using TryToLearnXamarinFormApp.Layout;
 using TryToLearnXamarinFormApp.Layout.Grid;
 using TryToLearnXamarinFormApp.ListViewDemo;
@@ -17,7 +18,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage =new NavigationPage(new ContactMaster());
+            MainPage =new Forms.Switch();
         }
 
         protected override void OnStart()
