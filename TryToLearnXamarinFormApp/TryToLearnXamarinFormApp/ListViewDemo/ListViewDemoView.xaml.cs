@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,12 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListViewDemoView : ContentPage
     {
+        private ObservableCollection<Contact> _contacts;
         public ListViewDemoView()
         {
             InitializeComponent();
-           
-            ListView.ItemsSource = new List<Contact>
+
+            _contacts = new ObservableCollection<Contact>
             {
                 new Contact()
                 {
@@ -33,6 +35,7 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
 
                 }
             };
+            ListView.ItemsSource = _contacts;
         }
 
        
@@ -40,6 +43,20 @@ namespace TryToLearnXamarinFormApp.ListViewDemo
         {
             var contact = e.SelectedItem as Contact;
             DisplayAlert("Seleted", contact.Name, "OK");
+        }
+
+        private void Call_OnClicked(object sender, EventArgs e)
+        {
+          
+            Contact contact =(sender as MenuItem).CommandParameter as Contact;
+            DisplayAlert("Call Click", contact.Name, "OK");
+
+        }
+
+        private void Delete_OnClicked(object sender, EventArgs e)
+        {
+            Contact contact = (sender as MenuItem).CommandParameter as Contact;
+            _contacts.Remove(contact);
         }
     }
 }

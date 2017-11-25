@@ -10,7 +10,13 @@
       <ListView.ItemTemplate>
          
           <DataTemplate>
-                <ViewCell>
+              <TextCell Text="{Binding Name}" Detail="{Binding Status}" >
+                  <TextCell.ContextActions>
+                        <MenuItem Text="Call" Clicked="Call_OnClicked" CommandParameter="{Binding .}"></MenuItem>
+                        <MenuItem Text="Delete" Clicked="Delete_OnClicked" IsDestructive="True" CommandParameter="{Binding .}"></MenuItem>
+                  </TextCell.ContextActions>
+              </TextCell>
+                <!--<ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="1">
                         <Image Source="{Binding ImageUrl}"> </Image>
                         <StackLayout HorizontalOptions="StartAndExpand">
@@ -19,7 +25,7 @@
                         </StackLayout>
                         <Button Text="Follow"></Button>
                     </StackLayout>
-                </ViewCell>
+                </ViewCell>-->
           </DataTemplate>
       </ListView.ItemTemplate>
   </ListView>
