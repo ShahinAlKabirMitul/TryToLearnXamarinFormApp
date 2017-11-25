@@ -10,6 +10,12 @@
                    <TextCell Text="Last Name" Detail="Mitul"></TextCell>
                    <EntryCell Label="Title" Placeholder="(eg Shopping )"></EntryCell>
                    <SwitchCell Text="Notifications" On="True"></SwitchCell>
+                   <ViewCell>
+                       <StackLayout Orientation="Horizontal" Padding="13,0">
+                            <Label Text="Start" VerticalOptions="Center"></Label>
+                            <DatePicker  Date="{x:Static x:DateTime.Today}" HorizontalOptions="EndAndExpand"></DatePicker>
+                       </StackLayout>
+                   </ViewCell>
                </TableSection>
 
            </TableRoot>
