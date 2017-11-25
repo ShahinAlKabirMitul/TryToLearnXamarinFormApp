@@ -18,7 +18,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage =new PickerForm();
+            MainPage =new DeteView();
         }
 
         protected override void OnStart()
