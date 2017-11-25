@@ -15,11 +15,12 @@ namespace TryToLearnXamarinFormApp.Nagivations
         public IntroductionPage()
         {
             InitializeComponent();
+          
         }
 
         private async void Back_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PopModalAsync();
         }
     }
 }

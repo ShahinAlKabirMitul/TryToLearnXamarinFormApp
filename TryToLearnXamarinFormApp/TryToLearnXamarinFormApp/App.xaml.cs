@@ -16,7 +16,11 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Welcome());
+            MainPage = new NavigationPage(new Welcome())
+            {
+                BarBackgroundColor = Color.Gray,
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
