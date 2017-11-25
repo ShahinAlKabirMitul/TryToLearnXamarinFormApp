@@ -6,6 +6,7 @@ using TryToLearnXamarinFormApp.Layout;
 using TryToLearnXamarinFormApp.Layout.Grid;
 using TryToLearnXamarinFormApp.ListViewDemo;
 using TryToLearnXamarinFormApp.Nagivations;
+using TryToLearnXamarinFormApp.Nagivations.MasterDetails;
 using Xamarin.Forms;
 
 namespace TryToLearnXamarinFormApp
@@ -16,11 +17,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Welcome())
-            {
-                BarBackgroundColor = Color.Gray,
-                BarTextColor = Color.White
-            };
+            MainPage =new NavigationPage(new ContactMaster());
         }
 
         protected override void OnStart()
