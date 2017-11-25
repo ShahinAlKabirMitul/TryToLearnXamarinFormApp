@@ -5,6 +5,7 @@ using System.Text;
 using TryToLearnXamarinFormApp.Layout;
 using TryToLearnXamarinFormApp.Layout.Grid;
 using TryToLearnXamarinFormApp.ListViewDemo;
+using TryToLearnXamarinFormApp.Nagivations;
 using Xamarin.Forms;
 
 namespace TryToLearnXamarinFormApp
@@ -15,7 +16,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage = new ListViewDemoView();
+            MainPage = new NavigationPage(new Welcome());
         }
 
         protected override void OnStart()
