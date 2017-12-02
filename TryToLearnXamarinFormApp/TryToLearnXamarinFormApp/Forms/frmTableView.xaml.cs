@@ -16,5 +16,16 @@ namespace TryToLearnXamarinFormApp.Forms
         {
             InitializeComponent();
         }
+
+        private  void Cell_OnTapped(object sender, EventArgs e)
+        {
+            var page = new ContactMethods();
+            page.ContactMethodListView.ItemSelected += (source, args) =>
+            {
+                contactMethod.Text = args.SelectedItem.ToString();
+                Navigation.PopAsync();
+            };
+             Navigation.PushAsync(page);
+        }
     }
 }

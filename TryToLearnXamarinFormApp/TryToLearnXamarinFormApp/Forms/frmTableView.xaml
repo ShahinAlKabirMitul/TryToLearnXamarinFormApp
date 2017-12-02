@@ -11,8 +11,21 @@
                    <TextCell Text="Last Name" Detail="Mitul"></TextCell>
                    <EntryCell Label="Title" Placeholder="(eg Shopping )"></EntryCell>
                    <SwitchCell Text="Notifications" On="True"></SwitchCell>
-                    <local:DateCell Label="Start"></local:DateCell>
-                    <local:DateCell Label="End"></local:DateCell>
+                   <local:DateCell Label="Start"></local:DateCell>
+                   <local:DateCell Label="End"></local:DateCell>
+                   <ViewCell Tapped="Cell_OnTapped">
+                       <StackLayout Orientation="Horizontal" Padding="13,5">
+                           <Label Text="Contact Method" VerticalOptions="Center"></Label>
+                           <Label
+                               x:Name="contactMethod" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               Text="None"
+                               TextColor="Gray"
+                               ></Label>
+                           
+                       </StackLayout>
+                   </ViewCell>
                </TableSection>
 
            </TableRoot>

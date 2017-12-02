@@ -18,7 +18,7 @@ namespace TryToLearnXamarinFormApp
         {
             InitializeComponent();
 
-            MainPage =new frmTableView();
+            MainPage =new NavigationPage(new frmTableView());
             
         }
 

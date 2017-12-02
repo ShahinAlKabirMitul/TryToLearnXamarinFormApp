@@ -41,6 +41,9 @@
     <Compile Include="Extesnsion\DateCell.xaml.cs">
       <DependentUpon>DateCell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ContactMethods.xaml.cs">
+      <DependentUpon>ContactMethods.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeteView.xaml.cs">
       <DependentUpon>DeteView.xaml</DependentUpon>
     </Compile>
@@ -262,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Extesnsion\DateCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ContactMethods.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
