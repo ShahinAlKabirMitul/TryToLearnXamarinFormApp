@@ -1,21 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using TryToLearnXamarinFormApp.Annotations;
 using Xamarin.Forms;
 
 namespace TryToLearnXamarinFormApp
 {
-    public class Recipe
+    public class Recipe:INotifyPropertyChanged
     {
+        private string _name;
+        public event PropertyChangedEventHandler PropertyChanged;
+
         [PrimaryKey, AutoIncrement]
 
         public int Id { get; set; }
+
         [MaxLength(255)]
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
     public partial class MainPage : ContentPage
     {
@@ -46,8 +68,11 @@ namespace TryToLearnXamarinFormApp
 
         }
 
-        void OnUpdate(object sender, System.EventArgs e)
+        async void OnUpdate(object sender, System.EventArgs e)
         {
+            Recipe recipe = _recipes[0];
+            recipe.Name += "Up";
+            await _connection.UpdateAsync(recipe);
         }
 
         async void OnDelete(object sender, System.EventArgs e)

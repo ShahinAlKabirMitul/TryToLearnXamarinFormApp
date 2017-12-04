@@ -107,6 +107,7 @@
     <Compile Include="Nagivations\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
