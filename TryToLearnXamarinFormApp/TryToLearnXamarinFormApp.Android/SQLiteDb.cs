@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 using SQLite;
-using Xamarin.Forms;
+
 using TryToLearnXamarinFormApp.Droid;
+using Xamarin.Forms;
 [assembly: Dependency(typeof(SQLiteDb))]
 namespace TryToLearnXamarinFormApp.Droid
 {

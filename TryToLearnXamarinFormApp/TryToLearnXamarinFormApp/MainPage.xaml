@@ -5,9 +5,18 @@
              x:Class="TryToLearnXamarinFormApp.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Hello Xamarin!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" Clicked="OnAdd" />
+                <Button Text="Update" Clicked="OnUpdate" HorizontalOptions="CenterAndExpand" />
+                <Button Text="Delete" Clicked="OnDelete" />
+            </StackLayout>
+            <ListView x:Name="recipesListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

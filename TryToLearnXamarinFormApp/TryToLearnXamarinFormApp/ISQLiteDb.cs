@@ -7,7 +7,7 @@ using SQLite;
 
 namespace TryToLearnXamarinFormApp
 {
-  public  interface ISQLiteDb
+    public interface ISQLiteDb
     {
         SQLiteAsyncConnection GetConnection();
     }
